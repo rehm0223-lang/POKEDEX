@@ -1,36 +1,95 @@
-# Pokédex Angular
+# Pokedex Angular - Despliegue en Azure
 
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![codecov](https://codecov.io/gh/keilermora/pokedex-angular/branch/master/graph/badge.svg?token=9E0D28IOFT)](https://codecov.io/gh/keilermora/pokedex-angular)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+## Descripción
 
-[https://keilermora.github.io/pokedex-angular/](https://keilermora.github.io/pokedex-angular/)
+Este proyecto consiste en una aplicación web desarrollada en **Angular** que permite consultar información de Pokémon utilizando la API pública de PokeAPI.
 
-La aplicación muestra el listado y el detalle de los Pokémon de las primeras 3 generaciones.
+La aplicación fue desplegada en la nube utilizando **Azure Static Web Apps**, cumpliendo con buenas prácticas de seguridad mediante la configuración de encabezados HTTP.
 
-La imagen que representa un Pokémon en el listado muestra las variaciones que estos tuvieron durante las primeras versiones, desde la versión Green (1996) hasta la version Emerald (2005).
+---
 
-Los detalles de un Pokémon individual muestra sus estadísticas base y los registros de la Pokédex de las diferentes versiones.
+## Creación de cuenta en Azure (Azure for Students)
 
-El proyecto fue desarrollado usando la librería de JavaScript [Angular](https://angular.io/) para crear la interfaz de usuario, en comunicación con la Api RESTful [PokéAPI](https://pokeapi.co/).
+### 1. Registro en Azure
 
-## Requisitos mínimos
+1. Ingresar a: https://azure.microsoft.com/es-es/free/students/
+2. Hacer clic en **"Comenzar gratis"**
+3. Iniciar sesión con cuenta de Microsoft
+4. Verificar identidad con correo institucional
+5. Completar registro
 
-- [Nodejs](https://nodejs.org) con soporte de largo plazo (LTS).
-- Un navegador web
+---
 
-## Ambiente de pruebas
+### 2. Acceso al portal
 
-Ejecutar en la raíz del proyecto:
+* Ir a: https://portal.azure.com
+* Iniciar sesión
+* Acceder al panel principal
+
+---
+
+## Tecnologías utilizadas
+
+* Angular
+* TypeScript
+* HTML / CSS
+* Azure Static Web Apps
+* PokeAPI
+
+---
+
+## Aplicación desplegada
+
+URL pública: *https://wonderful-tree-0106d2a0f.7.azurestaticapps.net/*
+
+---
+
+## Seguridad
+
+Se implementaron encabezados HTTP para mejorar la seguridad:
+
+* Content-Security-Policy
+* Strict-Transport-Security
+* X-Content-Type-Options
+* X-Frame-Options
+* Referrer-Policy
+
+---
+
+## Instalación local
+
+```bash
+npm install
+ng serve
+```
+
+Abrir en:
 
 ```
-npm start
+http://localhost:4200
 ```
 
-## Referencias
+---
 
-- [Angular](https://angular.io/): One framework.
-- [Angular Folder Structure](https://angular-folder-structure.readthedocs.io/en/latest/): Create a skeleton structure which is flexible for projects big or small.
-- [Font Awesome](https://fontawesome.com/): The web's most popular icon set and toolkit.
-- [Normalize.css](https://necolas.github.io/normalize.css/): A modern, HTML5-ready alternative to CSS resets.
-- [PokéAPI](https://pokeapi.co/): The RESTful Pokémon API.
+## Build de producción
+
+```bash
+ng build --configuration production
+```
+
+---
+
+## Estructura del proyecto
+
+```
+src/
+ ├── app/
+ ├── assets/
+ ├── environments/
+```
+
+---
+
+## Autor
+
+* Rafael Hernandez
